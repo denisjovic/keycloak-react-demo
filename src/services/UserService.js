@@ -39,6 +39,8 @@ const getUsername = () => _kc.tokenParsed?.preferred_username;
 const getFirstName = () => _kc.tokenParsed?.given_name;
 const getLastName = () => _kc.tokenParsed?.family_name;
 const getEmail = () => _kc.tokenParsed?.email;
+const getGroupData = () =>
+  _kc.tokenParsed?.groups.map((group) => group).join(', ');
 
 const UserService = {
   initKeycloak,
@@ -51,6 +53,7 @@ const UserService = {
   getEmail,
   getFirstName,
   getLastName,
+  getGroupData,
 };
 
 export default UserService;

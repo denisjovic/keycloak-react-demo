@@ -10,14 +10,12 @@ import Secure from './components/Secure';
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <RenderOnAnonymous>
-          <Unauthorized />
-        </RenderOnAnonymous>
-        <RenderOnAuthenticated>
-          <Secure />
-        </RenderOnAuthenticated>
-      </header>
+      <RenderOnAnonymous>
+        <Unauthorized />
+      </RenderOnAnonymous>{' '}
+      <RenderOnAuthenticated>
+        <Secure />
+      </RenderOnAuthenticated>
     </div>
   );
 }
